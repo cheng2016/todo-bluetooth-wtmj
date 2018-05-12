@@ -9,7 +9,7 @@
 
 ## 效果图
 
-![](screenshort/tmj20180513003006.png)![](screenshort/tmj_20180513_002942.png)
+![](screenshort/tmj20180513003006.png)                              ![](screenshort/tmj_20180513_002942.png)
 
 
 ## License
