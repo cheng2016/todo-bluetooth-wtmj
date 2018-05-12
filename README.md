@@ -2,14 +2,13 @@
 一个蓝牙的app，使用谷歌地图。
 
 
+## 效果图
+
+![](screenshort/tmj20180513003006.png)            ![](screenshort/tmj_20180513_002942.png)
+
 
 ## 声明
 该项目仅供技术研究参考，禁止一切商业目的的使用。
-
-
-## 效果图
-
-![](screenshort/tmj20180513003006.png)                              ![](screenshort/tmj_20180513_002942.png)
 
 
 ## License
