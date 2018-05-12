@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sessionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hostBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:background="@drawable/border_black_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/widget_size_8">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/contentTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOGOGO"
+                android:textColor="@color/title_text2"
+                android:textSize="@dimen/font_size_15" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/widget_size_12"
+                android:layout_height="@dimen/widget_size_12"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/widget_size_8"
+                android:src="@drawable/lock_pink" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/contentDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topLayout"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:text="2016/5/11"
+            android:textColor="@color/title_text2"
+            android:textSize="@dimen/font_size_12" />
+
+        <TextView
+            android:id="@+id/contentTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentDateTv"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:text="7:10 ~ 11:00"
+            android:textColor="@color/title_text2"
+            android:textSize="@dimen/font_size_12" />
+
+        <TextView
+            android:id="@+id/contentDurationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/contentTimeTv"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:layout_toEndOf="@+id/contentTimeTv"
+            android:text="(3 hrs 50 mins)"
+            android:textColor="@color/title_text2"
+            android:textSize="@dimen/font_size_12" />
+
+        <TextView
+            android:id="@+id/contentNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentTimeTv"
+            android:layout_marginLeft="@dimen/widget_size_8"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:layout_toEndOf="@+id/personIcon"
+            android:layout_toRightOf="@+id/personIcon"
+            android:text="3 going"
+            android:textColor="@color/title_text2"
+            android:textSize="@dimen/font_size_12" />
+
+        <ImageView
+            android:id="@+id/personIcon"
+            android:layout_width="@dimen/widget_size_15"
+            android:layout_height="@dimen/widget_size_15"
+            android:layout_below="@+id/contentTimeTv"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:src="@drawable/ppl_pink" />
+
+        <ImageView
+            android:id="@+id/editImg"
+            android:layout_width="@dimen/widget_size_30"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:gravity="right"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/okBtn"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/widget_size_60"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/widget_size_60"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:text="Cancel" />
+    </LinearLayout>
+</LinearLayout>

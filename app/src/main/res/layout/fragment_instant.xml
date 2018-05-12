@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/inst_autocomplete_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_100"
+            android:background="@color/home_text_color"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_marginLeft="@dimen/widget_size_12"
+                    android:src="@drawable/navigation4"/>
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_marginLeft="@dimen/widget_size_12"
+                    android:layout_marginTop="@dimen/widget_size_8"
+                    android:src="@drawable/dot"/>
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_20"
+                    android:layout_marginLeft="@dimen/widget_size_12"
+                    android:layout_marginTop="@dimen/widget_size_8"
+                    android:src="@drawable/navigation7"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/widget_size_fu14"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <AutoCompleteTextView
+                    android:id="@+id/startRouteEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/widget_size_32"
+                    android:layout_marginTop="@dimen/widget_size_10"
+                    android:background="@drawable/navigation_background"
+                    android:hint="Choose a starting point..."
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_13"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/endRouteEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/widget_size_32"
+                    android:layout_marginTop="@dimen/widget_size_15"
+                    android:background="@drawable/navigation_background"
+                    android:hint="Choose a destination..."
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_13"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/changeRouteIv"
+                android:layout_width="@dimen/widget_size_45"
+                android:layout_height="@dimen/widget_size_45"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/widget_size_fu14"
+                android:layout_weight="1"
+                android:src="@drawable/navi8"/>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/inst_maplayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_150"
+            android:layout_below="@id/inst_autocomplete_layout">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/inst_mapview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+        </FrameLayout>
+
+        <!--inst_opponent_layout and rectLayout-->
+        <LinearLayout
+            android:id="@+id/start1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/inst_maplayout"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/inst_opponent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:gravity="center|center_vertical">
+
+                <ImageView
+                    android:id="@+id/completeIcon"
+                    android:layout_width="@dimen/widget_size_30"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/competition_black"/>
+
+                <TextView
+                    android:id="@+id/findOpponent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/completeIcon"
+                    android:gravity="center"
+                    android:text="@string/find_opponent"
+                    android:textSize="@dimen/font_size_15"/>
+
+                <LinearLayout
+                    android:id="@+id/map_btn_layout"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_120"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/widget_size_30"
+                    android:layout_toRightOf="@id/findOpponent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/widget_size_5"
+                        android:text="@string/mapping"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_15"/>
+
+                    <ImageView
+                        android:id="@+id/mappingIcon"
+                        android:layout_width="@dimen/widget_size_20"
+                        android:layout_height="@dimen/widget_size_20"
+                        android:padding="@dimen/widget_size_3"
+                        android:src="@drawable/mapping"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/inst_oppnent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_below="@id/inst_opponent_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_2"
+                android:background="@drawable/corner_edit_bg_normal"
+                android:paddingBottom="@dimen/widget_size_10"
+                android:paddingLeft="@dimen/widget_size_5">
+
+                <com.wistron.swpc.android.WiTMJ.widget.FlowLayout
+                    android:id="@+id/inst_flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/inst_no_opponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Can't find opponent"
+                        android:visibility="gone"/>
+                    </com.wistron.swpc.android.WiTMJ.widget.FlowLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/inst_route_lv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_80"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/inst_listsegment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_80"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/widget_size_10"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/inst_start1_btn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_80"
+                    android:layout_height="@dimen/widget_size_35"
+                    android:gravity="center"
+                    android:text="@string/start"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--inst_complete_layout include timeLayout-->
+        <LinearLayout
+            android:id="@+id/inst_complete_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/inst_maplayout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/inst_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/widget_size_10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/timeIv1"
+                        android:layout_width="@dimen/widget_size_25"
+                        android:layout_height="@dimen/widget_size_25"
+                        android:src="@drawable/clock"/>
+
+                    <TextView
+                        android:id="@+id/timeTv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/widget_size_10"
+                        android:gravity="center"
+                        android:text="13:05"
+                        android:textSize="@dimen/font_size_20"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/toTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="to"
+                    android:textSize="@dimen/font_size_20"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/timeIv2"
+                        android:layout_width="@dimen/widget_size_25"
+                        android:layout_height="@dimen/widget_size_25"
+                        android:src="@drawable/clock"/>
+
+                    <TextView
+                        android:id="@+id/timeTv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/widget_size_10"
+                        android:gravity="center"
+                        android:text="15:10"
+                        android:textSize="@dimen/font_size_20"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/inst_cmplte_cncel_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/widget_size_10"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/inst_cmplte_btn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_80"
+                    android:layout_height="@dimen/widget_size_35"
+                    android:gravity="center"
+                    android:text="@string/complete"/>
+
+                <Button
+                    android:id="@+id/inst_cancel_btn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_80"
+                    android:layout_height="@dimen/widget_size_35"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

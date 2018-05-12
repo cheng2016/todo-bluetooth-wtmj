@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/widget_size_20"
+        android:layout_marginTop="@dimen/widget_size_5"
+        android:layout_marginBottom="@dimen/widget_size_8"
+        android:layout_marginRight="@dimen/widget_size_8"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tmjDevice"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_smal_btn_selector"
+            android:gravity="center"
+            android:enabled="false"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/widget_size_5"
+            android:paddingRight="@dimen/widget_size_5"
+            android:paddingTop="@dimen/widget_size_3"
+            android:paddingBottom="@dimen/widget_size_3"
+            android:text="Device1"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/font_size_10" />
+
+
+    <LinearLayout
+        android:id="@+id/tmjDeviceIconLayout"
+        android:layout_width="@dimen/widget_size_40"
+        android:layout_height="@dimen/widget_size_20"
+        android:layout_marginLeft="@dimen/widget_size_5"
+        android:clickable="true"
+        android:enabled="false"
+        android:background="@drawable/corner_smal_btn_selector"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/widget_size_20"
+            android:layout_height="@dimen/widget_size_20"
+            android:src="@drawable/logo_w" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tmjLayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/widget_size_220"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/corner_edit_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/widget_size_3"
+        app:layout_widthPercent="59%">
+
+        <ImageView
+            android:id="@+id/statusImg"
+            android:layout_width="@dimen/widget_size_12"
+            android:layout_height="@dimen/widget_size_12"
+            android:scaleType="fitXY"
+            android:background="@drawable/icon_bluetooth" />
+
+        <TextView
+            android:id="@+id/deviceNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:text="TMJ"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_size_15" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cyclingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/widget_size_8"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="Cycling information"
+        android:textColor="@color/home_text_color"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_14"
+        app:layout_heightPercent="6%" />
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/durationLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_marginRight="@dimen/widget_size_8"
+            android:background="@drawable/corner_edit_bg_normal"
+            android:gravity="center"
+            android:padding="@dimen/widget_size_5"
+            app:layout_marginLeftPercent="3%"
+            app:layout_widthPercent="45.5%">
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@drawable/icon_duration" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon1"
+                android:layout_toRightOf="@+id/icon1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/duration"
+                    android:textColor="@color/home_text_color"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/duration"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/mode_selection_bg" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:layout_marginRight="@dimen/widget_size_3"
+                    >
+
+                    <TextView
+                        android:id="@+id/durationHrsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:textStyle="bold"
+                        android:textColor="@color/home_text_color"
+                        android:text="0" />
+                    <TextView
+                        android:id="@+id/hrsTv"
+                        android:layout_toRightOf="@id/durationHrsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_11"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginTop="@dimen/widget_size_5"
+                        android:text="hrs" />
+                    <TextView
+                        android:id="@+id/durationMinsTv"
+                        android:layout_toRightOf="@id/hrsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginLeft="@dimen/widget_size_3"
+                        android:textStyle="bold"
+                        android:text="00" />
+                    <TextView
+                        android:id="@+id/minsTv"
+                        android:layout_toRightOf="@id/durationMinsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_11"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginTop="@dimen/widget_size_5"
+                        android:text="mins" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/caloriesLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/corner_edit_bg_normal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/widget_size_5"
+            app:layout_marginRightPercent="3%"
+            app:layout_widthPercent="45.5%">
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@drawable/icon_calories" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon2"
+                android:layout_toRightOf="@+id/icon2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/calories"
+                    android:textColor="@color/home_text_color"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/calories"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/mode_selection_bg" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/caloriesAllTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/home_text_color"
+                        android:textStyle="bold"
+                        android:text="0" />
+                    <TextView
+                        android:id="@+id/calTv"
+                        android:layout_toRightOf="@id/caloriesAllTv"
+                        android:layout_marginLeft="@dimen/widget_size_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_11"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginTop="@dimen/widget_size_5"
+                        android:text="cal" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/distanceLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_below="@+id/durationLayout"
+            android:layout_marginRight="@dimen/widget_size_8"
+            android:background="@drawable/corner_edit_bg_normal"
+            android:gravity="center"
+            android:padding="@dimen/widget_size_5"
+            app:layout_marginLeftPercent="3%"
+            android:layout_marginTop="@dimen/widget_size_8"
+            app:layout_widthPercent="45.5%">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@drawable/icon_distance" />
+            -
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon1"
+                android:layout_toRightOf="@+id/icon1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/distance"
+                    android:textColor="@color/home_text_color"
+                    android:textSize="@dimen/font_size_14"/>
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/duration"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/mode_selection_bg" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/distanceAllTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/home_text_color"
+                        android:textStyle="bold"
+                        android:text="0" />
+                    <TextView
+                        android:id="@+id/disTv"
+                        android:layout_toRightOf="@id/distanceAllTv"
+                        android:layout_marginLeft="@dimen/widget_size_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_11"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginTop="@dimen/widget_size_5"
+                        android:text="km" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/SpeedLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/caloriesLayout"
+            android:background="@drawable/corner_edit_bg_normal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/widget_size_5"
+            app:layout_marginRightPercent="3%"
+            android:layout_marginTop="@dimen/widget_size_8"
+            app:layout_widthPercent="45.5%">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@drawable/icon_speed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon2"
+                android:layout_toRightOf="@+id/icon2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/speed"
+                    android:textColor="@color/home_text_color"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/calories"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/mode_selection_bg" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/widget_size_3">
+                    <TextView
+                        android:id="@+id/speedAllTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_14"
+                        android:textColor="@color/home_text_color"
+                        android:textStyle="bold"
+                        android:text="0" />
+                    <TextView
+                        android:id="@+id/spdTv"
+                        android:layout_toRightOf="@id/speedAllTv"
+                        android:layout_marginLeft="@dimen/widget_size_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_11"
+                        android:textColor="@color/home_text_color"
+                        android:layout_marginTop="@dimen/widget_size_5"
+                        android:text="km/h"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/reset"
+        style="@style/ButtonStyle"
+        android:layout_width="@dimen/widget_size_80"
+        android:layout_height="@dimen/widget_size_35"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/widget_size_8"
+        android:gravity="center"
+        android:text="@string/reset"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="30%" />
+
+    <View
+        android:id="@+id/viewLongV"
+        style="@style/splitline_style"
+        android:layout_marginLeft="@dimen/widget_size_8"
+        android:layout_marginRight="@dimen/widget_size_8"/>
+
+    <TextView
+        android:id="@+id/modeTv"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLongV"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/widget_size_8"
+        android:text="@string/mode_selection"
+        android:textColor="@color/home_text_color"
+        android:textSize="@dimen/font_size_14"
+        android:textStyle="bold" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/noneLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_marginRight="@dimen/widget_size_8"
+            app:layout_widthPercent="45.5%"
+            app:layout_marginLeftPercent="3%"
+            android:background="@drawable/mode_btn_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/widget_size_5">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@null"
+                android:background="@drawable/none_press"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon1"
+                android:layout_toRightOf="@+id/icon1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/noneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/widget_size_3"
+                    android:layout_marginRight="@dimen/widget_size_3"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/none"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/navigationLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="45.5%"
+            app:layout_marginRightPercent="3%"
+            android:background="@drawable/mode_btn_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/widget_size_5">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@null"
+                android:background="@drawable/navigation_press" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon2"
+                android:layout_toRightOf="@+id/icon2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/navigation"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/calories"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/white" />
+
+                <ImageView
+                    android:id="@+id/navigationIv"
+                    android:layout_width="@dimen/widget_size_20"
+                    android:layout_height="@dimen/widget_size_20"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/navigation"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/trainingLayout"
+            android:layout_below="@+id/noneLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_marginRight="@dimen/widget_size_8"
+            app:layout_widthPercent="45.5%"
+            app:layout_marginLeftPercent="3%"
+            android:layout_marginTop="@dimen/widget_size_8"
+            android:background="@drawable/mode_btn_selector"
+            android:gravity="center"
+            android:padding="@dimen/widget_size_5">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:src="@null"
+                android:background="@drawable/training_press" />
+            -
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon1"
+                android:layout_toRightOf="@+id/icon1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/training"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/duration"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_1"
+                    android:background="@color/white" />
+                <com.wistron.swpc.android.WiTMJ.widget.TextProgressBar
+                    android:id="@+id/trainProgrsBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:background="@drawable/progressbar"/>
+
+                <TextView
+                    android:id="@+id/calories2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/widget_size_20"
+                    android:textSize="9sp"
+                    android:textColor="@color/white"
+                    android:text="Calories" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/competenceLayout"
+            android:layout_below="@+id/navigationLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_60"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="45.5%"
+            app:layout_marginRightPercent="3%"
+            android:layout_marginTop="@dimen/widget_size_8"
+            android:background="@drawable/mode_btn_selector"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:padding="@dimen/widget_size_5">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_40"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/widget_size_3"
+                android:src="@null"
+                android:background="@drawable/compete_press" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/icon2"
+                android:layout_toRightOf="@+id/icon2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Competition"
+                    android:textColor="@color/white"
+                    android:maxLines="1"
+                    android:textSize="@dimen/font_size_14" />
+
+                <View
+                    style="@style/splitline_style"
+                    android:layout_below="@id/calories"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/widget_size_3"
+                    android:layout_marginTop="@dimen/widget_size_3"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/font_size_11"
+                    android:textColor="@color/white"
+                    android:text="Rank1" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

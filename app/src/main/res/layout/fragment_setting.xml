@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/tmjLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_40"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/widget_size_10"
+        android:background="@drawable/corner_smal_btn_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/widget_size_3">
+
+        <ImageView
+            android:id="@+id/statusImg"
+            android:layout_width="@dimen/widget_size_20"
+            android:layout_height="@dimen/widget_size_20"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_bluetooth" />
+
+        <TextView
+            android:id="@+id/tmjBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:text="TMJ"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/setting_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tmjDeviceIconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/widget_size_25"
+        android:layout_marginBottom="@dimen/widget_size_8"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_8"
+
+        android:background="@drawable/corner_smal_btn_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/widget_size_3"
+
+        android:paddingLeft="@dimen/widget_size_5"
+        android:paddingRight="@dimen/widget_size_5"
+        android:paddingTop="@dimen/widget_size_3">
+
+        <ImageView
+            android:id="@+id/tmjDeviceIcon"
+            android:layout_width="@dimen/widget_size_12"
+            android:layout_height="@dimen/widget_size_12"
+            android:src="@drawable/connect_d" />
+
+        <TextView
+            android:id="@+id/tmjDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tmjDeviceIcon"
+            android:gravity="center"
+            android:text="Device"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/setting_white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_35"
+        android:background="@color/solid_host_black"
+        android:gravity="center"
+        android:text="Sensor"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/setting_white"
+        android:textStyle="bold" />
+
+    <include layout="@layout/item_device" />
+
+    <include layout="@layout/item_device" />
+
+    <include layout="@layout/item_device" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_35"
+        android:background="@color/solid_host_black"
+        android:gravity="center"
+        android:text="Projector"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/setting_white"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:text="Light"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:checked="true"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

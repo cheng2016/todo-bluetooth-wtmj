@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fowTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/widget_size_5"
+        android:layout_marginTop="@dimen/widget_size_5"
+        android:background="@drawable/textview_fow"
+        android:paddingBottom="@dimen/widget_size_3"
+        android:paddingLeft="@dimen/widget_size_5"
+        android:paddingRight="@dimen/widget_size_5"
+        android:paddingTop="@dimen/widget_size_3"
+        android:text="Geek"
+        android:textColor="@color/textview_fow_text_color"
+        android:textSize="@dimen/font_size_14" />
+
+    <ImageView
+        android:id="@+id/deleteImg"
+        android:layout_width="@dimen/widget_size_10"
+        android:layout_height="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_3"
+        android:layout_marginTop="@dimen/widget_size_3"
+        android:src="@drawable/cancel"
+        android:layout_gravity="right|top" />
+
+</FrameLayout>

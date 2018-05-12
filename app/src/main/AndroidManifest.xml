@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wistron.swpc.android.WiTMJ"
+    android:versionName="@string/version">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--<uses-permission android:name="android.permission." />-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.wistron.swpc.android.WiTMJ.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.wistron.swpc.android.WiTMJ.permission.C2D_MESSAGE"/>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!--tools:ignore="UnusedAttribute"
+    tools:replace="android:icon,android:theme,android:label"-->
+    <application
+        android:name=".TmjApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        tools:replace="android:icon"
+      >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified">
+
+        </activity>
+
+
+        <activity
+            android:name=".communication.notification.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified">
+
+        </activity>
+        <service android:name=".communication.notification.MyInstanceIDService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.microsoft.getstarted" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".communication.notification.RegistrationIntentService"
+            android:exported="false">
+        </service>
+
+
+
+        <activity android:name=".communication.DeviceControlActivity" />
+        <activity android:name=".pushmsg.PushActivity" />
+
+        <activity android:name=".competition.HostDetailActivity" />
+        <activity android:name=".activity.CompetitionResultDetailActivity" />
+
+        <activity
+            android:name=".competition.AddTagActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified" />
+        <activity
+            android:name=".competition.HostActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|stateUnspecified" />
+        <activity
+            android:name=".train.TrainingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <service
+            android:name=".communication.BluetoothLeService"
+            android:enabled="true" />
+        <service android:name=".gps.GPSService">
+        <intent-filter>
+            <action android:name="com.wistronits.tmj.gps_service" />
+            <category android:name="android.intent.category.default" />
+        </intent-filter>
+        </service>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".navigation.NavigationDetailActivity" />
+        <activity android:name=".physicalreport.CompetitionDetailActivity" />
+
+        <activity android:name=".communication.bluetooth.DeviceList"></activity>
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider208509832869659"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+    </application>
+
+</manifest>
+
+

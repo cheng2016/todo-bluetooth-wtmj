@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DED7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_100"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:src="@drawable/navigation4" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/navigation7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_fu14"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/navigation_et_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:background="@drawable/navigation_background"
+                android:hint="Choose a starting point..."
+                android:paddingLeft="@dimen/widget_size_10"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_13" />
+
+            <AutoCompleteTextView
+                android:id="@+id/navigation_et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_15"
+                android:background="@drawable/navigation_background"
+                android:hint="Choose a destination..."
+                android:paddingLeft="@dimen/widget_size_10"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nav_swap"
+            android:layout_width="@dimen/widget_size_45"
+            android:layout_height="@dimen/widget_size_45"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/widget_size_fu14"
+            android:layout_weight="1"
+            android:src="@drawable/navi8" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_300"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/navigation_mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/nav_list1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_80"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/nav_listsegment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_80"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_15"
+            android:paddingBottom="@dimen/widget_size_20">
+
+            <TextView
+                android:id="@+id/tv_ok"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_15"
+            android:paddingBottom="@dimen/widget_size_20">
+
+            <TextView
+                android:id="@+id/tv_start"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text=" Start "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/widget_size_20"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/rl_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/widget_size_15"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_complete"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_90"
+                    android:layout_height="@dimen/widget_size_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text=" Complete "
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_15"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_90"
+                    android:layout_height="@dimen/widget_size_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=" Cancel "
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

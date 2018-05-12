@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">WiTMJ</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="host">Host</string>
+    <string name="edit">Edit</string>
+
+    <string name="update">Update</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="title_alert">标题</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ble_not_supported">this device don\'t support ble</string>
+
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+
+
+    <string name="progress_dialog">Progress Dialog</string>
+    <string name="please_wait">Please wait...</string>
+
+
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home">Home</string>
+    <string name="physical_report">Physical Report</string>
+    <string name="compence_result">Competition Result</string>
+    <string name="tmj_device_setting">TMJ Device Setting</string>
+    <string name="about">About</string>
+    <string name="log_out">Log Out</string>
+
+    <!--home-->
+    <string name="duration">Duration</string>
+    <string name="distance">Distance</string>
+    <string name="speed">Speed</string>
+    <string name="calories">Calories</string>
+    <string name="none">None</string>
+    <string name="navigation">Navigation</string>
+    <string name="training">Training</string>
+    <string name="competence">Competence</string>
+    <string name="mode_selection">Mode select</string>
+    <string name="deny">Deny</string>
+    <string name="reset">Reset</string>
+    <string name="complete">Complete</string>
+    <string name="leave">Leave</string>
+
+
+    <!--physical fragment-->
+    <string name="start">Start</string>
+    <string name="Tag">tag</string>
+    <string name="day">Day</string>
+    <string name="physical">Physical</string>
+
+
+    <!--instant compete-->
+    <string name="find_opponent">Find your opponent</string>
+    <string name="mapping">Mapping</string>
+    <string name="userEmail">userName@wistronits.com</string>
+    <string name="google_app_id">AIzaSyD8WoFV1KJcZ2KLRPP1_TAqQpyZCK8N7sg</string>
+    <string name="version">v1.00(160612.003-T)</string>
+    <string name="facebook_app_id">208509832869659</string>
+
+    <string name="account">Account</string>
+    <string name="password">Password</string>
+    <string name="facebook_login">Login with Facebook</string>
+
+    <string name="nav_routes">%1$d routes to choose</string>
+
+    <string name="scan_device">Scan For Devices</string>
+    
+    <item type="id" name="tag_day"></item>
+    <item type="id" name="tag_week"></item>
+    <item type="id" name="tag_month"></item>
+    <item type="id" name="tag_year"></item>
+</resources>

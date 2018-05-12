@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DED7"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_100"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:src="@drawable/navigation4" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/navigation7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_fu14"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/train_et_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:background="@drawable/navigation_background"
+                android:hint="Choose a starting point..."
+                android:paddingLeft="@dimen/widget_size_10"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_13" />
+
+            <AutoCompleteTextView
+                android:id="@+id/train_et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_15"
+                android:background="@drawable/navigation_background"
+                android:hint="Choose a destination..."
+                android:paddingLeft="@dimen/widget_size_10"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_13" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_transform"
+            android:layout_width="@dimen/widget_size_45"
+            android:layout_height="@dimen/widget_size_45"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/widget_size_fu14"
+            android:layout_weight="1"
+            android:src="@drawable/navi8" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_100"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/train_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/train_route_lv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_80"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/train_listsegment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_80"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Training goal"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_size_20"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_size_5"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginTop="@dimen/widget_size_5"
+                android:src="@drawable/icon_speed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_8"
+                android:text="Speed"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/train_et_speed"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginLeft="@dimen/widget_size_8"
+            android:layout_weight="7"
+            android:background="@drawable/editing_background"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#DCCEC5"
+            android:textSize="@dimen/font_size_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_weight="3"
+            android:text="km/hr"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_size_5"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginTop="@dimen/widget_size_5"
+                android:src="@drawable/icon_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_8"
+                android:text="Distance"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/train_et_distance"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginLeft="@dimen/widget_size_8"
+            android:layout_weight="7"
+            android:background="@drawable/editing_background"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#DCCEC5"
+            android:textSize="@dimen/font_size_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_weight="3"
+            android:text="km"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_size_5"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginTop="@dimen/widget_size_5"
+                android:src="@drawable/icon_duration" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_8"
+                android:text="Duration"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_8"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/train_et_hr"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_weight="3"
+                android:background="@drawable/editing_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#DCCEC5"
+                android:textSize="@dimen/font_size_15" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="hr"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_12" />
+
+            <EditText
+                android:id="@+id/train_et_min"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_weight="3"
+                android:background="@drawable/editing_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#DCCEC5"
+                android:textSize="@dimen/font_size_15" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_weight="3"
+            android:text="min"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_size_5"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginTop="@dimen/widget_size_5"
+                android:src="@drawable/icon_calories" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_8"
+                android:text="Calories"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/train_et_cal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginLeft="@dimen/widget_size_8"
+            android:layout_weight="7"
+            android:background="@drawable/editing_background"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#DCCEC5"
+            android:textSize="@dimen/font_size_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_weight="3"
+            android:text="cal"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_12" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/widget_size_20">
+
+        <TextView
+            android:id="@+id/ok_training"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/widget_size_90"
+            android:layout_height="@dimen/widget_size_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/widget_size_20">
+
+        <TextView
+            android:id="@+id/start_training"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/widget_size_90"
+            android:layout_height="@dimen/widget_size_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Start"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_16"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

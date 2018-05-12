@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/app_background"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_40"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/widget_size_5"
+        android:paddingBottom="@dimen/widget_size_5"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="@dimen/widget_size_50"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            style="@style/ButtonStyle">
+            <ImageView
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_30"
+                android:padding="@dimen/widget_size_3"
+                android:src="@drawable/competition_white"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Competition"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView7"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21" />
+
+        <ImageView
+            android:id="@+id/competition_iv_fb"
+            android:layout_width="@dimen/widget_size_35"
+            android:layout_height="@dimen/widget_size_35"
+            android:src="@drawable/fb"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/competition_iv_line" />
+        <ImageView
+            android:id="@+id/competition_iv_line"
+            android:layout_width="@dimen/widget_size_35"
+            android:layout_height="@dimen/widget_size_35"
+            android:layout_marginLeft="@dimen/widget_size_3"
+            android:layout_marginRight="@dimen/widget_size_3"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/line"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_200">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:name="com.google.android.gms.maps.MapFragment"
+                  android:id="@+id/cmpte_dtal_map"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_30"
+        android:background="@drawable/app_bar_bg">
+
+        <ImageView
+            android:id="@+id/crwnIv"
+            android:layout_width="@dimen/widget_size_30"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_marginRight="@dimen/widget_size_3"
+            android:padding="@dimen/widget_size_3"
+            android:src="@drawable/crown_pink"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_toRightOf="@id/crwnIv"
+            android:gravity="center_vertical"
+            android:text="Rank"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/rankTv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:gravity="center_vertical"
+            android:text="Second"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_10">
+        <RelativeLayout
+            android:id="@+id/spdIconLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="12%"
+            app:layout_marginTopPercent="2%"
+            app:layout_marginRightPercent="4%">
+        <ImageView
+            android:id="@+id/spdIv"
+            android:layout_width="@dimen/widget_size_30"
+            android:layout_height="@dimen/widget_size_30"
+            android:src="@drawable/icon_speed"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/spdIv"
+            android:layout_alignBottom="@id/spdIv"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:text="Speed"
+            android:gravity="center"
+            android:textColor="@color/home_text_color"
+            android:textSize="@dimen/font_size_13"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/spdTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="34%"
+            app:layout_marginRightPercent="4%"
+            android:layout_below="@id/spdIconLayout"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/spdDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="km/h"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/disIconLayout"
+            android:layout_toRightOf="@id/spdIconLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="12%"
+            app:layout_marginTopPercent="2%">
+
+            <ImageView
+                android:id="@+id/disIv"
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_distance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/disIv"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:gravity="center"
+                android:text="@string/distance"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/disTextLayout"
+            android:layout_toRightOf="@id/spdTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="34%"
+            android:layout_below="@id/disIconLayout"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/disDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="km"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/durIconLayout"
+            android:layout_below="@id/spdTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="12%"
+            app:layout_marginTopPercent="2%"
+            app:layout_marginRightPercent="4%">
+
+            <ImageView
+                android:id="@+id/durIv"
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_28"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_duration"/>
+
+            <TextView
+                android:layout_toRightOf="@id/durIv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:gravity="center"
+                android:text="@string/duration"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/durTextLayout"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="34%"
+            app:layout_marginRightPercent="4%"
+            app:layout_marginBottomPercent="4%"
+                        android:layout_below="@id/durIconLayout"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/durHrsDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="h"
+                android:textSize="@dimen/font_size_14"/>
+            <TextView
+                android:id="@+id/durMinsDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="min"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/calIconLayout"
+            android:layout_toRightOf="@id/durIconLayout"
+            android:layout_below="@id/disTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="12%"
+            app:layout_marginTopPercent="2%">
+
+            <ImageView
+                android:id="@+id/calIv"
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_calories"/>
+
+            <TextView
+                android:layout_toRightOf="@id/calIv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/calories"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/calTextLayout"
+            android:layout_toRightOf="@id/spdIconLayout"
+            android:layout_below="@id/calIconLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="48%"
+            app:layout_heightPercent="34%"
+            app:layout_marginBottomPercent="4%"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/calDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="cal"
+                android:textSize="@dimen/font_size_14"/>
+
+        </LinearLayout>
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/widget_size_20"
+        android:layout_marginRight="@dimen/widget_size_20">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_size_120"
+            android:orientation="horizontal">
+<!--
+            android:id="@+id/spdIconLayout"
+-->
+            <RelativeLayout
+
+                android:layout_width="@dimen/widget_size_100"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_marginTop="@dimen/widget_size_3">
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_30"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_speed"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/widget_size_5"
+                    android:gravity="center"
+                    android:text="Speed"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_size_13"/>
+              <!--  android:id="@+id/spdTextLayout"-->
+
+                <LinearLayout
+                    android:layout_width="@dimen/widget_size_130"
+                    android:layout_height="@dimen/widget_size_80"
+                    android:background="@drawable/bg_rectangle_null"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15"
+                        android:background="@color/red"
+                        android:textSize="@dimen/font_size_25"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/widget_size_10"
+                        android:text="km/hr"
+                        android:textSize="@dimen/font_size_14"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+          <!--  android:layout_toRightOf="@id/spdIconLayout"-->
+<!--            <LinearLayout
+                android:id="@+id/disIconLayout"
+                android:layout_width="@dimen/widget_size_100"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/widget_size_45"
+                android:layout_marginTop="@dimen/widget_size_3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_30"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_distance"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/widget_size_5"
+                    android:gravity="center"
+                    android:text="@string/distance"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_size_13"/>
+            </LinearLayout>-->
+
+<!--
+            android:layout_toRightOf="@id/spdIconLayout"
+-->
+<!--            <LinearLayout
+                android:id="@+id/disTextLayout"
+                android:layout_width="@dimen/widget_size_130"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_below="@id/disIconLayout"
+                android:layout_marginLeft="@dimen/widget_size_45"
+                android:background="@drawable/bg_rectangle_null"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="@dimen/font_size_25"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/widget_size_10"
+                    android:text="km"
+                    android:textSize="@dimen/font_size_14"/>
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:id="@+id/durIconLayout"
+            android:layout_below="@id/spdTextLayout"
+            android:layout_width="@dimen/widget_size_100"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_duration"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:gravity="center"
+                android:text="@string/duration"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/durTextLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_80"
+            android:layout_below="@id/durIconLayout"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="hr"
+                android:textSize="@dimen/font_size_14"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="m"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/calIconLayout"
+            android:layout_toRightOf="@id/durIconLayout"
+            android:layout_below="@id/disTextLayout"
+            android:layout_width="@dimen/widget_size_100"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/widget_size_45"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_30"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_calories"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:gravity="center"
+                android:text="@string/calories"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calTextLayout"
+            android:layout_width="@dimen/widget_size_130"
+            android:layout_height="@dimen/widget_size_80"
+            android:layout_below="@id/calIconLayout"
+            android:layout_marginLeft="@dimen/widget_size_45"
+            android:layout_toRightOf="@id/spdIconLayout"
+            android:background="@drawable/bg_rectangle_null"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:textSize="@dimen/font_size_25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:text="cal"
+                android:textSize="@dimen/font_size_14"/>
+
+</LinearLayout>
+-->
+
+    </RelativeLayout>
+</LinearLayout>

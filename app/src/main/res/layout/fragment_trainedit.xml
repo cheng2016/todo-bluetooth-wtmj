@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_trainEdit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DED7"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_50"
+        android:background="#232D2F"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_18"
+                android:layout_height="@dimen/widget_size_18"
+                android:layout_marginLeft="@dimen/widget_size_20"
+                android:src="@drawable/navigation4" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:rotation="90"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:src="@drawable/navigation7" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/navigationProgressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:layout_weight="2"
+            android:background="@drawable/edit_trainbackground2"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=" Navigation Progress "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_16" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_15">
+
+        <ImageView
+            android:layout_width="@dimen/widget_size_20"
+            android:layout_height="@dimen/widget_size_20"
+            android:layout_toLeftOf="@+id/tv_duration"
+            android:src="@drawable/icon_duration" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/widget_size_3"
+            android:text="Duration"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_16" />
+
+    </RelativeLayout>
+
+    <com.wistron.swpc.android.WiTMJ.widget.TrainTimeProgressBar
+        android:id="@+id/train_time_pb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_50"
+        android:layout_marginLeft="@dimen/widget_size_15"
+        android:layout_marginRight="@dimen/widget_size_15"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:background="#FFEDE6"
+        android:gravity="center"
+        android:textSize="@dimen/font_size_20"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progressDrawable="@drawable/train_progressbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_2"
+        android:layout_margin="@dimen/widget_size_15"
+        android:background="#CBC2BE" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Training goal"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_size_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_3"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_speed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Speed"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+
+        <com.wistron.swpc.android.WiTMJ.widget.TrainSpeedProgressBar
+            android:id="@+id/train_speed_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:background="@drawable/progressbar"
+            android:gravity="center_vertical"
+            android:max="100"
+            android:progressDrawable="@drawable/train_progressbar" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_20"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Distance"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+        <com.wistron.swpc.android.WiTMJ.widget.TrainDistanceProgressBar
+            android:id="@+id/train_distance_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:background="@drawable/progressbar"
+            android:gravity="center_vertical"
+            android:max="100"
+            android:progressDrawable="@drawable/train_progressbar"
+            android:textSize="@dimen/font_size_13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_20"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_calories" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Calories"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+        <com.wistron.swpc.android.WiTMJ.widget.TrainCaloriesProgressBar
+            android:id="@+id/train_cal_pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:background="@drawable/progressbar"
+            android:gravity="center_vertical"
+            android:max="100"
+            android:progressDrawable="@drawable/train_progressbar"
+            android:textSize="@dimen/font_size_13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/widget_size_20"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rl_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_5"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_complete"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text=" Complete "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" Cancel "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

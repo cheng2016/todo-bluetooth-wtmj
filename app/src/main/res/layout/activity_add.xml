@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_100"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/participantTitle"
+        android:layout_margin="@dimen/widget_size_10"
+        android:background="@drawable/corner_edit_bg_normal"
+        android:paddingBottom="@dimen/widget_size_5"
+        android:paddingLeft="@dimen/widget_size_5">
+
+        <com.wistron.swpc.android.WiTMJ.widget.FlowLayout
+            android:id="@+id/fowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"></TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_30"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/keywordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/searchBtn"
+            android:layout_toStartOf="@+id/searchBtn"
+            android:background="@drawable/corner_edit_bg"
+            android:paddingLeft="@dimen/widget_size_8"
+            android:enabled="true"
+            android:hint="Please enter friend's ID"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_12" />
+
+        <LinearLayout
+            android:id="@+id/searchBtn"
+            android:layout_width="@dimen/widget_size_55"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/widget_size_5"
+            android:clickable="true"
+            android:gravity="center"
+            style="@style/ButtonStyle">
+            <ImageView
+                android:id="@+id/searchImg"
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:background="@drawable/search"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/participantTitle"
+        android:layout_margin="@dimen/widget_size_10"
+        android:layout_marginTop="@dimen/widget_size_3"
+        android:background="@drawable/corner_edit_bg_normal"
+        android:padding="@dimen/widget_size_10">
+
+        <TextView
+            android:id="@+id/listTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_13" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/widget_size_3"
+            android:layout_below="@+id/listTitleTv">
+
+            <ListView
+                android:id="@+id/userListView"
+                style="@style/ListStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

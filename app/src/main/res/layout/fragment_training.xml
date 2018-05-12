@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DED7"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_50"
+        android:background="@drawable/app_bar_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/training_iv_back"
+            android:layout_width="@dimen/widget_size_20"
+            android:layout_height="@dimen/widget_size_20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/widget_size_15"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_bigtime"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/widget_size_50"
+            android:text="2016/05/01 05:10"
+            android:textColor="#F1DCD5"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_45"
+        android:background="#232D2F">
+
+        <TextView
+            android:id="@+id/tv_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Training"
+            android:textColor="#F1DED8"
+            android:textSize="@dimen/font_size_20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_fb"
+            android:layout_width="@dimen/widget_size_35"
+            android:layout_height="@dimen/widget_size_35"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/widget_size_30"
+            android:layout_toRightOf="@+id/tv_training"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:layout_width="@dimen/widget_size_35"
+            android:layout_height="@dimen/widget_size_35"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_toRightOf="@+id/iv_fb"
+            android:src="@drawable/line" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_140"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/fragment_training_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/widget_size_20"
+            android:layout_height="@dimen/widget_size_20"
+            android:src="@drawable/icon_duration" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_3"
+            android:text="Duration"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_20" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_50"
+        android:layout_marginLeft="@dimen/widget_size_15"
+        android:layout_marginRight="@dimen/widget_size_15"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:background="#FFEDE6"
+        android:gravity="center"
+        android:hint="00:00:00"
+        android:singleLine="true"
+        android:textColorHint="#333333"
+        android:textSize="@dimen/font_size_25" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_2"
+        android:layout_margin="@dimen/widget_size_15"
+        android:background="#CBC2BE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_3"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_speed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Speed"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+        <com.wistron.swpc.android.WiTMJ.widget.TrainSpeedProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="  12/15 km/hr"
+            android:textColor="#EAD8D1"
+            android:textSize="@dimen/font_size_13"
+            android:max="100"
+            android:progress="70"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/train_progressbar"
+            android:background="@drawable/progressbar"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_20"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Distance"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+
+        <com.wistron.swpc.android.WiTMJ.widget.TrainDistanceProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="  12/15 km/hr"
+            android:textColor="#EAD8D1"
+            android:textSize="@dimen/font_size_13"
+            android:max="100"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:progress="60"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/train_progressbar"
+            android:background="@drawable/progressbar"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/widget_size_20"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_20"
+            android:layout_marginTop="@dimen/widget_size_5"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_20"
+                android:layout_height="@dimen/widget_size_20"
+                android:src="@drawable/icon_calories" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/widget_size_5"
+                android:text="Calories"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_size_13" />
+        </LinearLayout>
+        <com.wistron.swpc.android.WiTMJ.widget.TrainCaloriesProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginRight="@dimen/widget_size_30"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="#EAD8D1"
+            android:textSize="@dimen/font_size_13"
+            android:max="100"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:progress="50"
+            android:layout_gravity="center"
+            android:progressDrawable="@drawable/train_progressbar"
+            android:background="@drawable/progressbar"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

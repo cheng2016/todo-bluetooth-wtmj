@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DED7"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_100"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:weightSum="8">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:src="@drawable/navigation4" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_15"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:layout_width="@dimen/widget_size_15"
+                android:layout_height="@dimen/widget_size_20"
+                android:layout_marginLeft="@dimen/widget_size_12"
+                android:layout_marginTop="@dimen/widget_size_12"
+                android:src="@drawable/navigation7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_fu14"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:background="@drawable/navigation_background"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/et_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_32"
+                android:layout_marginTop="@dimen/widget_size_15"
+                android:background="@drawable/navigation_background"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/widget_size_45"
+            android:layout_height="@dimen/widget_size_45"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/widget_size_fu14"
+            android:layout_weight="1"
+            android:src="@drawable/navi8" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_30"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:text="走環東大道"
+            android:textSize="@dimen/font_size_12" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/font_size_20"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:text="40分鐘"
+            android:textColor="#1D7449"
+            android:textSize="@dimen/font_size_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/font_size_20">
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="15公里"
+            android:textSize="@dimen/font_size_12" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/widget_size_30"
+        android:id="@+id/map_layout"
+        android:layout_width="@dimen/widget_size_150"
+        android:layout_height="@dimen/widget_size_100"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/navigationEdit_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_startnavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/widget_size_30"
+        android:layout_marginTop="@dimen/widget_size_5"
+        android:text="開始導航"
+        android:textColor="#85C2DD"
+        android:textSize="@dimen/font_size_12" />
+
+    <TextView
+        android:id="@+id/tv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C9BEBB" />
+
+    <LinearLayout
+        android:id="@+id/ll_route1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_route1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_30"
+            android:layout_marginTop="@dimen/font_size_10"
+            android:text="走樟樹二路"
+            android:textSize="@dimen/font_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_20"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1小時25分鐘"
+                android:textColor="#F07B52"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/tv_distance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25公里"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C9BEBB" />
+
+    <LinearLayout
+        android:id="@+id/ll_route2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_route2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_30"
+            android:layout_marginTop="@dimen/font_size_10"
+            android:text="走樟樹二路"
+            android:textSize="@dimen/font_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_20"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1小時50分鐘"
+                android:textColor="#F07B52"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/tv_distance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38公里"
+                android:textSize="@dimen/font_size_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rl_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/widget_size_15"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/widget_size_20">
+
+            <TextView
+                android:id="@+id/tv_complete"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text=" Complete "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/widget_size_15"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/widget_size_20">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/ButtonStyle"
+                android:layout_width="@dimen/widget_size_90"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" Cancel "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_16" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

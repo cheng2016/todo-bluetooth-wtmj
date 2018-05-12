@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <com.wistron.swpc.android.WiTMJ.widget.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/PermissionsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text="Permissions"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/PermissionsTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:background="@drawable/corner_edit_bg">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/permissionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Privacy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_13" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownVerticalOffset="@dimen/widget_size_27"
+                    android:id="@+id/spinner" />
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/widget_size_5"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/rop_p" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_below="@+id/PermissionsTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/nameTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:background="@drawable/corner_edit_bg"
+                android:padding="@dimen/widget_size_5">
+
+                <EditText
+                    android:id="@+id/nameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:text=""
+                    android:background="@color/solid_host_black"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_13" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_below="@+id/nameTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text="Date"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/dateTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:clickable="true"
+                android:background="@drawable/corner_edit_bg_normal"
+                android:padding="@dimen/widget_size_5">
+
+                <TextView
+                    android:id="@+id/dateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/date" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/timeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_below="@+id/dateTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text="Time"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/timeTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:background="@drawable/corner_edit_bg_normal"
+                android:padding="@dimen/widget_size_5">
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:text=""
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/clock" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/startRoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_below="@+id/timeTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text="Route"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15" />
+
+            <RelativeLayout
+                android:id="@+id/startPlaceLayout"
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/startRoutTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:background="@drawable/corner_edit_bg_normal"
+                android:padding="@dimen/widget_size_5">
+
+                <TextView
+                    android:id="@+id/startPlaceTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|left"
+                    android:background="@color/solid_host"
+                    android:text=""
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/navigation5" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/endRoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_below="@+id/startRoutTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15"/>
+
+            <RelativeLayout
+                android:id="@+id/endPlaceLayout"
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_30"
+                android:layout_alignBottom="@+id/endRoutTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:background="@drawable/corner_edit_bg_normal"
+                android:padding="@dimen/widget_size_5">
+
+                <TextView
+                    android:id="@+id/endPlaceTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:background="@color/solid_host"
+                    android:text=""
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <ImageView
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/navigation6" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/participantTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_below="@+id/endRoutTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="top"
+                android:text="Participant"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/participantTitle"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:paddingBottom="@dimen/widget_size_5"
+                android:paddingLeft="@dimen/widget_size_5"
+                android:background="@drawable/corner_edit_bg_normal">
+
+                <com.wistron.swpc.android.WiTMJ.widget.FlowLayout
+                    android:id="@+id/fowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/widget_size_3"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/addImg"
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_marginTop="@dimen/widget_size_5"
+                    android:layout_marginRight="@dimen/widget_size_3"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/participant"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/NoteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_below="@+id/participantTitle"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="top"
+                android:text="Note"
+                android:textColor="@color/text_host"
+                android:textSize="@dimen/font_size_15" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/widget_size_200"
+                android:layout_height="@dimen/widget_size_80"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/NoteTitle"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_5"
+                android:background="@drawable/corner_edit_bg"
+                android:padding="@dimen/widget_size_5">
+
+                <EditText
+                    android:id="@+id/noteEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@color/solid_host_black"
+                    android:textSize="@dimen/font_size_13"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/widget_size_40"
+                android:layout_below="@+id/NoteTitle"
+                android:layout_marginBottom="@dimen/widget_size_20"
+                android:layout_marginTop="@dimen/widget_size_20"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/okBtn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_100"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/widget_size_10"
+                    android:text="Ok" />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_100"
+                    android:layout_height="match_parent"
+                    android:text="Delete" />
+            </LinearLayout>
+
+            Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Switch"
+                android:id="@+id/switch1"
+                android:layout_alignBottom="@+id/participantTitle"
+                android:layout_toRightOf="@+id/endRoutTitle"
+                android:layout_toEndOf="@+id/endRoutTitle"
+                android:layout_marginBottom="28dp" />
+        </RelativeLayout>
+
+    </com.wistron.swpc.android.WiTMJ.widget.ReboundScrollView>
+
+</RelativeLayout>

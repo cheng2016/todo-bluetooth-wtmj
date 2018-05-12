@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/img_pressed"/>
+            <size
+                android:width="0dp"
+                android:height="0dp"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/img_pressed"/>
+        </shape>
+    </item>
+
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/img_pressed"/>
+            <!--           <padding
+                           android:bottom="12dp"
+                           android:left="12dp"
+                           android:right="12dp"
+                           android:top="12dp" />-->
+            <size
+                android:width="0dp"
+                android:height="0dp"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/img_pressed"/>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/img_pressed"/>
+            <!--           <padding
+                           android:bottom="12dp"
+                           android:left="12dp"
+                           android:right="12dp"
+                           android:top="12dp" />-->
+            <size
+                android:width="0dp"
+                android:height="0dp"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/img_pressed"/>
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/black"/>
+            <size
+                android:width="0dp"
+                android:height="0dp"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/black"/>
+        </shape>
+    </item>
+    <item android:state_selected="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/black"/>
+            <size
+                android:width="0dp"
+                android:height="0dp"/>
+            <stroke
+                android:width="1px"
+                android:color="@color/black"/>
+        </shape>
+    </item>
+
+</selector>

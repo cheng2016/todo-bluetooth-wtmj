@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/home"/>
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/report"
+            android:title="@string/physical_report" />
+        <item
+            android:id="@+id/nav_result"
+            android:icon="@drawable/result"
+            android:title="@string/compence_result"
+            />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/devicesetting"
+            android:title="@string/tmj_device_setting"/>
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about"
+            android:title="@string/about" />
+    </group>
+
+    <item android:title="@string/log_out">
+        <menu>
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/logout"
+                android:title="@string/log_out" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/schedult_content">
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/schedule_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/hostBtn"
+            style="@style/ButtonStyle"
+            android:layout_width="@dimen/widget_size_60"
+            android:layout_height="@dimen/widget_size_30"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:text="Host" />
+
+        <LinearLayout
+            android:id="@+id/sessionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hostBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/widget_size_10"
+                android:layout_marginRight="@dimen/widget_size_10"
+                android:layout_marginTop="@dimen/widget_size_8"
+                android:background="@drawable/border_white_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/widget_size_8">
+
+                <LinearLayout
+                    android:id="@+id/topLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/contentTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GoGoing"
+                        android:textColor="@color/title_text1"
+                        android:textSize="@dimen/font_size_16" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/widget_size_12"
+                        android:layout_height="@dimen/widget_size_12"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/widget_size_5"
+                        android:src="@drawable/lock_black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topLayout"
+                    android:layout_marginTop="@dimen/widget_size_5"
+                    android:text="2016/5/11 7:10 ~ 11:00 (3 hrs 50 mins)"
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <TextView
+                    android:id="@+id/contentNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contentTimeTv"
+                    android:layout_marginLeft="@dimen/widget_size_8"
+                    android:layout_marginTop="@dimen/widget_size_5"
+                    android:layout_toEndOf="@+id/personIcon"
+                    android:layout_toRightOf="@+id/personIcon"
+                    android:text="2 going"
+                    android:textColor="@color/title_text1"
+                    android:textSize="@dimen/font_size_13" />
+
+                <ImageView
+                    android:id="@+id/personIcon"
+                    android:layout_width="@dimen/widget_size_15"
+                    android:layout_height="@dimen/widget_size_15"
+                    android:layout_below="@+id/contentTimeTv"
+                    android:layout_marginTop="@dimen/widget_size_5"
+                    android:src="@drawable/ppl_black" />
+
+                <ImageView
+                    android:id="@+id/detailImg"
+                    android:layout_width="@dimen/widget_size_30"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/list" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/widget_size_10"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/okBtn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_60"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_marginRight="@dimen/widget_size_10"
+                    android:text="Ok" />
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    style="@style/ButtonStyle"
+                    android:layout_width="@dimen/widget_size_60"
+                    android:layout_height="@dimen/widget_size_30"
+                    android:layout_marginRight="@dimen/widget_size_10"
+                    android:text="Cancel" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_marginRight="@dimen/widget_size_10"
+            android:layout_marginTop="@dimen/widget_size_10"
+            android:background="@color/line_normal"></View>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"
+            style="@style/ListStyle"
+            android:id="@+id/listView" />
+    </LinearLayout>
+</FrameLayout>

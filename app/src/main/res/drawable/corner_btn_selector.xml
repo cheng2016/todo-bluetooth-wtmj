@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <!-- 定义当button 处于pressed 状态时的形态。-->
+        <shape>
+            <stroke android:width="3px" android:color="@color/border_btn" />
+            <gradient android:startColor="@color/press_start_btn"
+                    android:endColor="@color/press_end_btn"
+                    android:angle="90"/>
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+
+    <item android:state_focused="true">
+        <!-- 定义当button获得focus时的形态-->
+        <shape>
+            <gradient android:startColor="@color/press_start_btn"
+                android:endColor="@color/press_end_btn"
+                    android:angle="90"/>
+            <stroke android:width="3px" android:color="@color/border_btn"/>
+            <corners  android:radius="3dp"/>
+        </shape>
+
+    </item>
+    
+    <item android:state_enabled="false">
+        <!-- 定义当button获得不能点击时的形态-->
+        <shape>
+            <stroke android:width="3px" android:color="@color/border_btn" />
+            <gradient android:startColor="@color/press_start_btn"
+                android:endColor="@color/press_end_btn"
+                    android:angle="90"/>
+            <corners android:radius="3dp"/>
+        </shape>
+    </item>
+    
+
+    <item >
+        <!-- 定义当button默认的形态-->
+        <shape>
+            <solid android:color="@color/shadow_btn"></solid>
+            <gradient android:startColor="@color/normal_start_btn"
+                    android:endColor="@color/normal_end_btn"
+                    android:angle="90"/>
+            <stroke android:width="3px" android:color="@color/border_btn"/>
+            <corners  android:radius="3dp" />
+
+        </shape>
+    </item>
+</selector>

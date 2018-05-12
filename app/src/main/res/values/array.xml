@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hobby">
+        <item>Privacy</item>
+        <item>Public</item>
+    </string-array>
+
+    <!-- spinnerAdapter array-->
+    <string-array name="date_type">
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+
+</resources>

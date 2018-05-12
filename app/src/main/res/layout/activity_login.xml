@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/widget_size_80"
+        android:layout_marginTop="@dimen/widget_size_20"
+        android:src="@drawable/tmj_logo"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Please enter your web account"
+        android:layout_marginTop="@dimen/widget_size_16"
+        android:layout_gravity="center_horizontal" />
+
+    TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Account："
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginTop="@dimen/widget_size_10"
+        android:textColor="@color/black"
+        android:id="@+id/textView3" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_40"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:text=""
+        android:hint="@string/account"
+        android:textColorHint="@color/login_hint_text"
+        android:background="@drawable/corner_edit_login"
+        android:layout_marginTop="@dimen/widget_size_18"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:layout_marginBottom="@dimen/widget_size_10"
+        android:textSize="@dimen/font_size_14"
+        android:layout_gravity="left|center_vertical"
+        android:paddingLeft="@dimen/widget_size_5"
+        android:textColor="@color/black"
+        android:id="@+id/accountEdit" />
+
+    TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Password："
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/widget_size_10"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_size_40"
+        android:inputType="textPassword"
+        android:ems="20"
+        android:background="@drawable/corner_edit_login"
+        android:textColorHint="@color/login_hint_text"
+        android:layout_marginTop="@dimen/widget_size_3"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:textSize="@dimen/font_size_14"
+        android:layout_gravity="left|center_vertical"
+        android:paddingLeft="@dimen/widget_size_5"
+        android:textColor="@color/black"
+        android:id="@+id/passwordEdit"
+        android:hint="@string/password"
+        android:text="" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/widget_size_18"
+        android:layout_height="@dimen/widget_size_42">
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="@dimen/widget_size_100"
+        android:layout_height="match_parent"
+        android:text="Login"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        app:layout_widthPercent="45%"
+        android:layout_alignParentLeft="true"
+        style="@style/ButtonStyle" />
+    <Button
+        android:id="@+id/cleanBtn"
+        android:layout_width="@dimen/widget_size_100"
+        android:layout_height="match_parent"
+        android:text="Clean"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:layout_alignParentRight="true"
+        app:layout_widthPercent="45%"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        style="@style/ButtonStyle" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/widget_size_18"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/widget_size_40">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1.3px"
+            app:layout_widthPercent="40%"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_centerVertical="true"
+            style="@style/splitline_style"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerInParent="true"
+            android:textColor="@color/or_color"
+            android:text="OR"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1.3px"
+            app:layout_widthPercent="40%"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/widget_size_10"
+            style="@style/splitline_style"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+    <com.facebook.login.widget.LoginButton
+        android:visibility="gone"
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/widget_size_18" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/fbLoginBtn"
+        android:background="@drawable/corner_facebook_bg"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/widget_size_10"
+        android:layout_marginLeft="@dimen/widget_size_10"
+        android:layout_marginTop="@dimen/widget_size_15"
+        android:layout_marginBottom="@dimen/widget_size_15"
+        android:layout_height="@dimen/widget_size_42">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_size_25"
+            android:layout_marginLeft="@dimen/widget_size_10"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/fb_logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/facebook_login"
+            />
+    </RelativeLayout>
+</LinearLayout>

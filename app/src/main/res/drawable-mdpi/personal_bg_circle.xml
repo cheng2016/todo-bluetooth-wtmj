@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="oval">
+    <!-- solid指定形状的填充色，只有android:color一个属性 -->
+    <solid android:color="@color/black" />
+    <!-- padding设置内容区域离边界的间距 -->
+    <padding
+        android:bottom="@dimen/widget_size_20"
+        android:left="@dimen/widget_size_20"
+        android:right="@dimen/widget_size_20"
+        android:top="@dimen/widget_size_20" />
+<!--    &lt;!&ndash; corners设置圆角，只适用于rectangle &ndash;&gt;
+    <corners android:radius="2dp" />-->
+
+    <size
+        android:width="320px"
+        android:height="320px" />
+    <!-- stroke设置描边 -->
+    <stroke
+        android:width="1px"
+        android:color="@color/black"/>
+
+
+</shape>
