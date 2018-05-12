@@ -1,5 +1,5 @@
 ﻿# todo-bluetooth-wtmj
-一个蓝牙的app，使用谷歌地图。
+一个蓝牙的app，采用mvc框架，网络请求组件使用retrofit2 + okhttp3 + eventbus ，使用谷歌地图。
 
 
 ## 效果图
